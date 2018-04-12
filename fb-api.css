@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
 .navbar{
 height: 8vh;
 padding: 1vh 0 1vh 0;
@@ -20,7 +21,7 @@ padding: 1vh 0 1vh 0;
 #nav-userName{
   color:#eee;
   font-family: 'Poppins', sans-serif;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 600;
   padding-right: 20px;
 }
@@ -37,7 +38,7 @@ padding: 1vh 0 1vh 0;
     border-radius: 30px 30px 30px 30px;
     color:white;
     padding:5px 10px;
-    font-size:15px;
+    font-size:0.6em;
 }
 #cover{
   background-repeat: no-repeat;
@@ -51,6 +52,9 @@ padding: 1vh 0 1vh 0;
   position: absolute;
   bottom: -4%;
   width: 30%;
+}
+.nav-tabs, .tab-content{
+  margin-left: 20vw;
 }
 .userDetails{
   border:none;
@@ -85,4 +89,17 @@ padding: 1vh 0 1vh 0;
   color: #1a1a1a;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
+}
+@media (max-width:768px) {
+  .nav-tabs, .tab-content{margin-left:0; font-size: 0.6em;}
+  #nav-profilePhoto, #nav-userName{ display: none;}
+  .navbar{height: 7vh;}
+  .nav-icon{height:3vh;}
+  .brand-logo{height: 4.8vh;}
+  .search-box{height: 4vh;}
+  .notif .badge-pill{font-size:0.5em;}
+  .search-box{font-size: 0.6em;}
+}
+@media (max-width:480px) {
+  #cover{height: 40vh;}
 }

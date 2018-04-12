@@ -1,6 +1,5 @@
 let myFacebookToken;
 $(document).ready(()=>{
-
   if(window.location.search.split('=').length>1){
       myFacebookToken=window.location.search.split('=')[1];
     }
@@ -10,9 +9,12 @@ $(document).ready(()=>{
   else{
     getAllDetails();
   }
-
-  $('ul li a').click(function(){ $('li a').removeClass("active"); $(this).addClass("active"); });
-
+  $('ul li a').click(function(){
+    $('li a').removeClass("active");
+    $(this).addClass("active");
+    $('.tab-pane').removeClass("active");
+    $($(this).attr('href')).addClass("active");
+  });
 });
 
 let getAllDetails =()=>{
@@ -24,25 +26,11 @@ let getAllDetails =()=>{
     success:(response)=>{
       $('#dataSection').css('display','flex');
       $('#userName').append(response.name);
-
-        $('#nav-userName').append(response.name);
-        $('#nav-profilePhoto').html('<img src="'+response.picture.data.url+'"/>')
-
+      $('#nav-userName').append(response.name);
+      $('#nav-profilePhoto').html('<img src="'+response.picture.data.url+'"/>')
       $('#favouriteQuote').append(response.quotes);
       $('#profilePhoto').html('<img src="'+response.picture.data.url+ '" class="img-fluid profileHeight"/>');
       $('#cover').css('background-image','url('+response.cover.source+')');
-
-      if (window.matchMedia('(max-width: 768px)').matches){
-          $('.nav-tabs').css('margin-left','0');
-          $('.tab-content').css('margin-left','0');
-          $('#feeds').css('width','100%');
-          $('#nav-profilePhoto').css('display','none');
-          $('#nav-userName').css('display','none');
-          $('body').css('font-size','0.7em');
-      }
-      if (window.matchMedia('(max-width: 480px)').matches){
-         $('#cover').css('height','40vh');
-      }
 
       $.ajax({
          type:'GET',
@@ -69,7 +57,7 @@ let getAllDetails =()=>{
             }
           }
          },
-         error:(err)=>{
+         error:(err)=>{console.log(err.responseJSON.error.message);
          }
        });
 
