@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+.navbar{
+height: 8vh;
+padding: 1vh 0 1vh 0;
+}
+.brand-logo{
+  height: 5.8vh;
+  margin-right: 1vw;
+}
+.search-box{
+  border:none;
+  width: 40vw;
+  height: 5vh;
+}
+#nav-profilePhoto img{
+  height: 6vh;
+  padding-right: 20px;
+}
+#nav-userName{
+  color:#eee;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  padding-right: 20px;
+}
+.nav-icon{
+  margin:0 0 0 2vw;
+  height:4vh;
+}
+.badge-pill{
+    position: absolute;
+    top:1px;
+    right:-7px;
+    background:red;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    color:white;
+    padding:5px 10px;
+    font-size:15px;
+}
+#cover{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  margin-top:5vh;
+  box-shadow: 1px 1px 10px #2C2C2C;
+}
+#profilePhoto{
+  position: absolute;
+  bottom: -4%;
+  width: 30%;
+}
+.userDetails{
+  border:none;
+  border-left: 2px solid #00b0ff;
+}
+.rowStyle{
+  margin-top: 2vh;
+}
+#feed-thumb{
+  margin-top: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#feeds{
+  display: flex;
+  flex-direction: column;
+  width: 86.5%;
+  border-width: 2px 2px;
+  border-style: solid;
+  border-color: #e6e6e6;
+  padding: 10px 0px 20px 0px;
+}
+.feed-thumbnail{
+  align-self: center;
+  margin-top: 2vh;
+  margin-bottom: 2px;
+}
+.feed-title{
+  padding: 0 0.4vw 0 0.4vw;
+  font-size: 0.8em;
+  color: #1a1a1a;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Facebook API</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="navbar justify-content-between" style="background-color: #000;">
+      <div class="form-inline" style="position:absolute;left:3%;">
+        <img src="fb-logo.png" alt="brand" class="brand-logo">
+        <div class="form-inline" style="background-color:#fff;padding:2px 2px;border-radius:2%;">
+          <input class="search-box" type="search" placeholder="Search" aria-label="Search">
+          <img src="search-icon-md.png" style="height:3vh;">
+       </div>
+     </div>
+        <div class="form-inline " style="position:absolute; right:5%;">
+        <div id="nav-profilePhoto" class="nav-dp"> </div>
+        <div id="nav-userName"></div>
+        <img src="fr-ic.png" class="nav-icon">
+        <img src="msg-ic.png" class="nav-icon">
+        <div class="notif">
+          <img src="notif-ic.png" class="nav-icon">
+          <span class="badge badge-pill badge-danger">4</span>
+        </div>
+
+      </div>
+
+    </nav>
+      <div class="container">
+        <div class="row">
+          <div id="cover" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="container">
+                <div id="profilePhoto">
+                </div>
+            </div>
+          </div>
+        </div>
+
+          <ul class="nav nav-tabs" role="tablist" style="margin:3vh 0 0 20vw">
+            <li class="nav-item ">
+              <a class="nav-link active" data-toggle="tab" href="#about" role="tab">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#feed" role="tab">User Feed</a>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content" style="margin-left:20vw">
+            <div class="tab-pane active" id="about" role="tabpanel">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 userDetails">
+                  <div class="row rowStyle">
+                      <div class="col-4 col-sm-3 col-md-2 col-lg-2 col-xl-2">Name:
+                      </div>
+                      <div id="userName" class="col-8 col-sm-9 col-md-10 col-lg-10 col-xl-10">
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-4 col-4 col-sm-3 col-md-2 col-lg-2 col-xl-2">Quote:
+                      </div>
+                      <div id="favouriteQuote" class="col-8 col-sm-9 col-md-10 col-lg-10 col-xl-10">
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="feed" role="tabpanel">
+
+              <div id="feed-thumb">
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
